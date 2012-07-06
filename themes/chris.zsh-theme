@@ -19,7 +19,7 @@ function vcprompt_info {
 
 PS1=$'
 %{$fg[green]%}%n %{$reset_color%}on %{$fg[green]%}%m %{$reset_color%}in %{$fg[yellow]%}%c %{$reset_color%}$(vcprompt_info)
-%{$fg[cyan]%}%D{%H:%M%:%S} λ  %{$reset_color%}'
+%{$fg[cyan]%}%D{%H:%M:%S} λ  %{$reset_color%}'
 
 
 #PS1=$'
