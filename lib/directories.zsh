@@ -3,6 +3,13 @@ setopt auto_name_dirs
 setopt auto_pushd
 setopt pushd_ignore_dups
 
+# Basic directory operations
+alias -- .="pwd"
+alias ...="cd ../.."                # Go up two directories
+alias ....="cd ../../.."            # Go up three directories
+alias .....="cd ../../../.."        # Go up four directories
+alias ......="cd ../../../../.."    # Go up five directories
+
 alias ..='cd ..'
 alias cd..='cd ..'
 alias cd...='cd ../..'
@@ -19,6 +26,8 @@ alias 6='cd +6'
 alias 7='cd +7'
 alias 8='cd +8'
 alias 9='cd +9'
+alias -- -='cd -'
+alias -- ~="cd ~"
 
 cd () {
   if   [[ "x$*" == "x..." ]]; then
@@ -42,3 +51,7 @@ alias d='dirs -v | head -10'
 function mcd() { 
   mkdir -p "$1" && cd "$1"; 
 }
+# Creating and deleting
+function rmm() { rm -r $*}
+alias md='mkdir -p'
+function mdd() { mkdir -p $1; cd $1 }
